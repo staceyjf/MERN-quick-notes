@@ -3,9 +3,11 @@ import sendRequest from "./send-request"
 // the base path of the Express route 
 const BASE_URL = "/api/notes";
 
-// as this is a 'GET' request and has no payload we don't need any more params
-export async function getNotesList(notes) {
-   alert('is this working');
-   // return sendRequest(`${BASE_URL}`, credentials);
+// as this is a 'GET' request so additional args
+export function fetchNotes() {
+   return sendRequest(`${BASE_URL}`);
 }
-
+// as this is a 'POST' request 
+export function createNote(newNote) {
+   return sendRequest(`${BASE_URL}/new`, 'POST', newNote)
+}

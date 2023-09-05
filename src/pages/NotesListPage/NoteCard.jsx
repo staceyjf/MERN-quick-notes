@@ -1,7 +1,6 @@
 function NotesCard({note}) {
     return (
       <>
-         <h1>getNotesList</h1>
           <div className="card">
             {/* <div
               className="card-image"

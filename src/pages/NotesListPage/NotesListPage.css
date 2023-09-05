@@ -12,10 +12,10 @@
   }
   
   .card {
-    width: 300px;
-    height: 350px;
+    width: 200px;
+    height: 250px;
     background-color: #fff;
-    margin-bottom: 20px;
+    margin: 20px;
     transition: transform 0.2s; /* slowing down the hover control the speed and style of a transition effect */
   }
   
