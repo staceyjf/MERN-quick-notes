@@ -1,0 +1,48 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1000px;
+    padding: 20px;
+  }
+  
+  .card-container a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .card {
+    width: 300px;
+    height: 350px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    transition: transform 0.2s; /* slowing down the hover control the speed and style of a transition effect */
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-image {
+    height: 250px;
+    background-position: top left;
+    background-size: cover;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  .card-content p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+  }
+  

@@ -14,18 +14,21 @@ function AuthPage({user, setUser}) {
  return (
    <main>
      <>
-        
+     <h1>Welcome to Quick Notes</h1>
         {clicked ? (
           <>
-            <h1>Login</h1>
+            <h4>Please Login</h4>
             <LoginForm user={user} setUser={setUser} />
+            <p>Don't have an account?</p>
           </>
         ) : (
           <>
-            <h1>Sign up</h1>
+            <h4>Please sign up</h4>
             <SignUpForm setUser={setUser} />
+            <p>Have an account?</p>
           </>
         )}
+        
         <button onClick={handleToggle}>{buttonText}</button>
       </>
    </main>

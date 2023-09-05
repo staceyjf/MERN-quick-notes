@@ -27,18 +27,13 @@ app.use(require('./config/checkToken'));
 const port = process.env.PORT || 3001;
 
 // we need to put the API routes here before the "catch all" route
-// AJAX needs to go to our express server not dev server 
-// use use method to mount middleware
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/notes', require('./routes/api/notes'));
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX/API requests
 app.get('/*', function(req, res) {
     // sending the production ready in our build folder - index.html file 
-    // served 3 times
-        // A user types a path into the address bar and presses enter eg for the first time
-        // The user refreshes the browser eg a get req get send with a specific path eg /dashboard which we don't have
-        //
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 

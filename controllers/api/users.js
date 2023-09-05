@@ -10,18 +10,9 @@ module.exports = {
 
 // will pass on a token to the users-api.jsx
 async function create(req, res) {
-    // // baby step response is going to send back the user object (re.json) which contains an object of our 3 properties
-    // // res.json is a promise
-    // res.json({
-    //     user: {
-    //         name: req.body.name,
-    //         email: req.body.email
-    //     }
-    // });
     try {
         // add our user to the db via req.body
         const user = await User.create(req.body);
-        // create the token
         const token = createJWT(user);
         // can use .json to send back a string 
         // (method to send a JSON response from a server to a client)
