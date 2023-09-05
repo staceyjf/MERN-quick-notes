@@ -1,14 +1,15 @@
 import { useState } from 'react';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import * as notesService from '../../utilities/notes-service';
-import NoteCard from './NoteCard'; 
+// import NoteCard from './NoteCard';
+import "./NotesList.css" 
 
-function NotesIndex() {
+function NotesList() {
 
   const [notes, setNote] = useState({});
 
-  async function notesIndex() {
-    const note = await notesService.notesIndex();
+  async function getNotesList() {
+    const note = await notesService.getNotesList();
   }
 
   //this needs to be updated to the correct logic
@@ -43,4 +44,4 @@ function NotesIndex() {
     )
    }
    
-   export default NotesIndex
+   export default NotesList

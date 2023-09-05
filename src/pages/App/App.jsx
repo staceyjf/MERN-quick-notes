@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 // Page components
 import AuthPage from "../AuthPage/AuthPage";
 import NewNotePage from "../NewNotePage/NewNotePage";
-import NotesIndex from "../NotesIndex/NotesIndex";
+import NotesList from "../NotesList/NotesList";
 // Components
 import NavBar from "../../components/NavBar/NavBar";
 
@@ -25,7 +25,7 @@ function App() {
               {/* Routes components in here * - instance of the competent provided as a prop
               only renders the best matching path based on the address bar*/}
               <Route path="/notes/new" element={<NewNotePage />} />
-              <Route path="/notes" element={<NotesIndex/>} />
+              <Route path="/notes" element={<NotesList/>} />
           </Routes>
         </> 
         :
