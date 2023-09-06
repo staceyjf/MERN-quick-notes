@@ -1,0 +1,7 @@
+
+POST http://localhost:3001/notes/new
+Content-Type: application/json
+{
+            text: req.body.text,
+            user: req.user._id
+        }

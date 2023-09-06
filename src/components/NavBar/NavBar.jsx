@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 import * as userService from "../../utilities/users-service" // importing users-service
 import "./NavBar.css"
 import logo from "./logo.svg"
@@ -28,22 +28,22 @@ function NavBar({ user, setUser }) {
             <ul>
               <li>Welcome {user.name}!</li>
               <li>
-                <NavLink exact activeclassname="active" to="/">
+                {/* <Link exact activeclassname="active" to="/">
                     Home
-                </NavLink>
+                </Link> */}
               </li>
               <li>
-                <NavLink  activeclassname="active" to="/notes">
+                <Link to="/notes">
                     All Notes
-                </NavLink>
+                </Link>
               </li>
               <li>
-                <NavLink activeclassname="active" to="/notes/new">
+                <Link to="/notes/new">
                 New note
-                </NavLink>
+                </Link>
               </li>
               <li>
-                <NavLink to="" onClick={handleLogOut}>Log out</NavLink>
+                <Link to="" onClick={handleLogOut}>Log out</Link>
               </li>
             </ul>
           </div>
